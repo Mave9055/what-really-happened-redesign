@@ -60,16 +60,13 @@ export default function Home() {
             
             {/* Hero Visual */}
             <div className="hidden md:block">
-              <div className="bg-secondary rounded-lg p-8 text-center">
-                <div className="grid grid-cols-3 gap-2">
-                  {Array.from({ length: 18 }).map((_, i) => (
-                    <div
-                      key={i}
-                      className="bg-card border border-border rounded p-3 text-xs font-mono text-text-secondary hover:bg-accent hover:text-accent-foreground transition-all cursor-pointer"
-                    >
-                      {String(i).padStart(2, '0')}
-                    </div>
-                  ))}
+              <div className="relative h-96 bg-gradient-to-br from-secondary via-background to-tertiary rounded-lg overflow-hidden">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="text-6xl font-bold text-accent-rust/20 mb-4">18</div>
+                    <p className="text-text-secondary font-serif text-lg">Complete Sessions</p>
+                    <p className="text-text-tertiary text-sm mt-2">Organized in 5 Parts</p>
+                  </div>
                 </div>
               </div>
             </div>
