@@ -1,12 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, BookOpen, Users, Zap } from "lucide-react";
+import { ArrowRight, CheckCircle2, XCircle } from "lucide-react";
 
 /**
- * Design Philosophy: Warm Institutional with Narrative Flow
- * - Warm cream background (#faf9f7) with sage accents
- * - Serif typography (Lora/Crimson Pro) for warmth and readability
- * - Flowing, narrative-driven layout with asymmetric placement
- * - Rust (#a85a3a) and gold (#d4a574) accent colors
+ * Design Philosophy: Dark Professional
+ * - Deep charcoal background (#0f1117) with refined accents
+ * - Modern sans-serif typography (Inter) with serif headings (Lora)
+ * - Clean, structured layout with premium spacing
+ * - Blue accent (#58a6ff) for professional, trustworthy feel
  */
 
 export default function Home() {
@@ -36,17 +36,19 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 md:px-8">
+      <section className="pt-32 pb-20 px-4 md:px-8 border-b border-border">
         <div className="container max-w-5xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <div className="section-label">A Trauma Education Series</div>
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight text-text-primary">
-                What happened to you —<br />
-                <em className="text-accent-rust not-italic">not what's wrong with you.</em>
-              </h1>
-              <p className="text-lg text-text-secondary leading-relaxed">
-                18 sessions. One documented life. A complete curriculum for understanding Complex PTSD in plain English.
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <div className="section-label">Trauma Education Series</div>
+                <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+                  What happened to you —<br />
+                  <span className="text-accent">not what's wrong with you.</span>
+                </h1>
+              </div>
+              <p className="text-lg text-text-secondary leading-relaxed max-w-lg">
+                18 sessions. One documented life. A complete curriculum for understanding Complex PTSD in plain English. Deployable from day one.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button className="btn-primary">
@@ -60,11 +62,11 @@ export default function Home() {
             
             {/* Hero Visual */}
             <div className="hidden md:block">
-              <div className="relative h-96 bg-gradient-to-br from-secondary via-background to-tertiary rounded-lg overflow-hidden">
+              <div className="relative h-96 bg-gradient-to-br from-secondary via-background to-tertiary rounded-lg overflow-hidden border border-border">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center">
-                    <div className="text-6xl font-bold text-accent-rust/20 mb-4">18</div>
-                    <p className="text-text-secondary font-serif text-lg">Complete Sessions</p>
+                    <div className="text-7xl font-bold text-accent/30 mb-4">18</div>
+                    <p className="text-text-secondary font-serif text-xl">Complete Sessions</p>
                     <p className="text-text-tertiary text-sm mt-2">Organized in 5 Parts</p>
                   </div>
                 </div>
@@ -75,10 +77,10 @@ export default function Home() {
       </section>
 
       {/* Quote Section */}
-      <section className="py-16 px-4 bg-secondary">
+      <section className="py-20 px-4 bg-secondary border-b border-border">
         <div className="container max-w-3xl">
           <blockquote className="text-center">
-            <p className="text-2xl md:text-3xl font-serif text-text-primary mb-4 italic">
+            <p className="text-2xl md:text-3xl font-serif text-text-primary mb-6 italic">
               "The revolution is trauma-informed — or it is not a revolution at all."
             </p>
             <cite className="text-sm text-text-tertiary font-mono tracking-wider">
@@ -89,42 +91,42 @@ export default function Home() {
       </section>
 
       {/* What This Is Section */}
-      <section id="about" className="py-20 px-4">
-        <div className="container max-w-4xl">
+      <section id="about" className="py-20 px-4 border-b border-border">
+        <div className="container max-w-5xl">
           <div className="grid md:grid-cols-3 gap-12">
             <div>
-              <div className="section-label">01</div>
-              <h2 className="text-3xl font-bold mb-4 text-text-primary">What This Is</h2>
+              <div className="section-label">01 · Overview</div>
+              <h2 className="text-3xl font-bold">What This Is</h2>
             </div>
-            <div className="md:col-span-2 space-y-6">
+            <div className="md:col-span-2 space-y-8">
               <div>
-                <h3 className="text-xl font-semibold text-text-primary mb-3">A Psychoeducational Curriculum</h3>
+                <h3 className="text-xl font-semibold text-text-primary mb-4">A Psychoeducational Curriculum</h3>
                 <p className="text-text-secondary leading-relaxed">
-                  <em>What Really Happened</em> is a psychoeducational group curriculum, not a clinical treatment program. It does not diagnose, prescribe, or provide therapy. It teaches the mechanisms of Complex PTSD — its neurological foundations, its relational consequences, its behavioral presentations, and its treatment logic — through the sustained examination of one documented life.
+                  <em>What Really Happened</em> is a psychoeducational group curriculum, not a clinical treatment program. It does not diagnose, prescribe, or provide therapy. It teaches the mechanisms of Complex PTSD through the sustained examination of one documented life.
                 </p>
               </div>
               
               <div>
-                <h3 className="text-lg font-semibold text-text-primary mb-3">Five-Part Structure</h3>
+                <h3 className="text-lg font-semibold text-text-primary mb-4">Five-Part Structure</h3>
                 <ul className="space-y-3 text-text-secondary">
                   <li className="flex gap-3">
-                    <span className="text-accent-rust font-bold">•</span>
+                    <span className="text-accent flex-shrink-0 mt-1">▸</span>
                     <span><strong>Part I:</strong> How trauma gets built into a nervous system in early development</span>
                   </li>
                   <li className="flex gap-3">
-                    <span className="text-accent-rust font-bold">•</span>
+                    <span className="text-accent flex-shrink-0 mt-1">▸</span>
                     <span><strong>Part II:</strong> What it does to adult relationships</span>
                   </li>
                   <li className="flex gap-3">
-                    <span className="text-accent-rust font-bold">•</span>
+                    <span className="text-accent flex-shrink-0 mt-1">▸</span>
                     <span><strong>Part III:</strong> The coping strategies deployed when regulation becomes impossible</span>
                   </li>
                   <li className="flex gap-3">
-                    <span className="text-accent-rust font-bold">•</span>
+                    <span className="text-accent flex-shrink-0 mt-1">▸</span>
                     <span><strong>Part IV:</strong> The internal architecture of a nervous system in crisis</span>
                   </li>
                   <li className="flex gap-3">
-                    <span className="text-accent-rust font-bold">•</span>
+                    <span className="text-accent flex-shrink-0 mt-1">▸</span>
                     <span><strong>Part V:</strong> What can be learned late and what systems failed</span>
                   </li>
                 </ul>
@@ -135,31 +137,31 @@ export default function Home() {
       </section>
 
       {/* The Pivot Section */}
-      <section className="py-20 px-4 bg-secondary">
-        <div className="container max-w-3xl">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-card border border-border rounded-lg p-8">
+      <section className="py-20 px-4 bg-secondary border-b border-border">
+        <div className="container max-w-4xl">
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="bg-background border border-border rounded-lg p-8">
               <div className="section-label opacity-50">The Old Question</div>
-              <h3 className="text-2xl font-bold text-text-tertiary line-through">What's wrong with you?</h3>
+              <h3 className="text-2xl font-bold text-text-tertiary line-through mt-4">What's wrong with you?</h3>
             </div>
-            <div className="bg-card border-2 border-accent-rust rounded-lg p-8">
+            <div className="bg-background border-2 border-accent rounded-lg p-8">
               <div className="section-label">The Right Question</div>
-              <h3 className="text-2xl font-bold text-text-primary">What happened to you?</h3>
+              <h3 className="text-2xl font-bold text-text-primary mt-4">What happened to you?</h3>
             </div>
           </div>
-          <p className="text-center text-text-secondary mt-8 leading-relaxed">
+          <p className="text-center text-text-secondary leading-relaxed max-w-2xl mx-auto">
             That shift changes everything. It moves the focus from pathology to history. It opens the possibility that the nervous system isn't broken — it's surviving.
           </p>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 px-4">
+      <section id="pricing" className="py-20 px-4 border-b border-border">
         <div className="container max-w-5xl">
-          <div className="mb-12">
-            <div className="section-label">02</div>
-            <h2 className="text-4xl font-bold mb-4 text-text-primary">Modular Deployment</h2>
-            <p className="text-lg text-text-secondary">Start with one module. Expand when it works. No long-term commitment required to begin.</p>
+          <div className="mb-16">
+            <div className="section-label">02 · Pricing</div>
+            <h2 className="text-4xl font-bold mb-4">Modular Deployment</h2>
+            <p className="text-lg text-text-secondary">Start with one module. Expand when it works. No long-term commitment required.</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
@@ -170,34 +172,33 @@ export default function Home() {
               { title: "Part IV", subtitle: "The Internal Battlefield", sessions: "Sessions 08–12 · 5 sessions", price: "$1,750" },
               { title: "Part V", subtitle: "Changing the World Around You", sessions: "Sessions 13–16 · 4 sessions", price: "$1,500" },
             ].map((item, idx) => (
-              <div key={idx} className="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <div className="section-label text-xs">{item.title}</div>
-                <h3 className="text-lg font-bold text-text-primary mb-2">{item.subtitle}</h3>
+              <div key={idx} className="bg-secondary border border-border rounded-lg p-6 hover:border-accent transition-colors">
+                <div className="section-label text-xs mb-3">{item.title}</div>
+                <h3 className="text-lg font-bold text-text-primary mb-3">{item.subtitle}</h3>
                 <p className="text-xs text-text-tertiary font-mono mb-4">{item.sessions}</p>
-                <p className="text-2xl font-bold text-accent-rust">{item.price}</p>
+                <p className="text-2xl font-bold text-accent">{item.price}</p>
               </div>
             ))}
           </div>
 
-          <div className="bg-accent-rust text-white rounded-lg p-8 text-center">
+          <div className="bg-accent text-background rounded-lg p-8 text-center">
             <h3 className="text-2xl font-bold mb-2">Full Program</h3>
-            <p className="mb-4">All 18 Sessions — Complete Curriculum</p>
+            <p className="mb-4 opacity-90">All 18 Sessions — Complete Curriculum</p>
             <p className="text-4xl font-bold mb-4">$7,000</p>
-            <p className="text-sm opacity-90">All pricing includes delivery, materials, and a written outcome report.</p>
+            <p className="text-sm opacity-80">All pricing includes delivery, materials, and a written outcome report.</p>
           </div>
         </div>
       </section>
 
       {/* Curriculum Section */}
-      <section id="curriculum" className="py-20 px-4 bg-secondary">
+      <section id="curriculum" className="py-20 px-4 bg-secondary border-b border-border">
         <div className="container max-w-5xl">
           <div className="mb-12">
-            <div className="section-label">03</div>
-            <h2 className="text-4xl font-bold mb-4 text-text-primary">18 Sessions · 5 Parts</h2>
-            <p className="text-lg text-text-secondary">The Complete Curriculum</p>
+            <div className="section-label">03 · Curriculum</div>
+            <h2 className="text-4xl font-bold">18 Sessions · 5 Parts</h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6">
             {[
               { num: "00", title: "Welcome, Safety, and Why This Course Exists" },
               { num: "01", title: "The Blueprint of Survival" },
@@ -218,8 +219,8 @@ export default function Home() {
               { num: "15", title: "The Crucial Question" },
               { num: "16", title: "The Revolution Must Be Trauma-Informed" },
             ].map((session, idx) => (
-              <div key={idx} className="bg-card border border-border rounded-lg p-6 hover:border-accent-rust transition-colors">
-                <div className="text-sm font-mono text-accent-rust font-bold mb-2">{session.num}</div>
+              <div key={idx} className="bg-background border border-border rounded-lg p-6 hover:border-accent transition-colors">
+                <div className="text-sm font-mono text-accent font-bold mb-2">{session.num}</div>
                 <h4 className="text-text-primary font-semibold">{session.title}</h4>
               </div>
             ))}
@@ -228,8 +229,8 @@ export default function Home() {
       </section>
 
       {/* Key Quotes Section */}
-      <section className="py-20 px-4">
-        <div className="container max-w-4xl">
+      <section className="py-20 px-4 border-b border-border">
+        <div className="container max-w-5xl">
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { quote: "A concept you can only hold in your head is a concept you cannot use in your body.", session: "Session 02" },
@@ -246,50 +247,50 @@ export default function Home() {
       </section>
 
       {/* Right Fit Section */}
-      <section className="py-20 px-4 bg-secondary">
-        <div className="container max-w-4xl">
+      <section className="py-20 px-4 bg-secondary border-b border-border">
+        <div className="container max-w-5xl">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-2xl font-bold text-text-primary mb-6">Right Fit</h3>
-              <p className="text-sm text-text-tertiary font-mono uppercase tracking-wider mb-4 text-accent-rust">This curriculum is designed for your program if:</p>
+              <h3 className="text-2xl font-bold text-text-primary mb-8">Right Fit</h3>
+              <p className="text-sm text-text-tertiary font-mono uppercase tracking-wider mb-6 text-accent">This curriculum is designed for your program if:</p>
               <ul className="space-y-4 text-text-secondary">
                 <li className="flex gap-3">
-                  <Zap className="w-5 h-5 text-accent-rust flex-shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
                   <span>Your audience is non-clinical — corrections, recovery, peer support, or workforce</span>
                 </li>
                 <li className="flex gap-3">
-                  <Zap className="w-5 h-5 text-accent-rust flex-shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
                   <span>You need a scripted, facilitator-ready program with no clinical hiring requirement</span>
                 </li>
                 <li className="flex gap-3">
-                  <Zap className="w-5 h-5 text-accent-rust flex-shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
                   <span>Your goal is psychoeducation and trauma literacy, not clinical competency certification</span>
                 </li>
                 <li className="flex gap-3">
-                  <Zap className="w-5 h-5 text-accent-rust flex-shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
                   <span>You are building trauma-informed culture from the ground up</span>
                 </li>
               </ul>
             </div>
             
             <div>
-              <h3 className="text-2xl font-bold text-text-primary mb-6">Not Designed For</h3>
-              <p className="text-sm text-text-tertiary font-mono uppercase tracking-wider mb-4 text-accent-rust">This curriculum is not the right tool if:</p>
+              <h3 className="text-2xl font-bold text-text-primary mb-8">Not Designed For</h3>
+              <p className="text-sm text-text-tertiary font-mono uppercase tracking-wider mb-6 text-accent">This curriculum is not the right tool if:</p>
               <ul className="space-y-4 text-text-secondary">
                 <li className="flex gap-3">
-                  <span className="text-accent-rust font-bold">✕</span>
+                  <XCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
                   <span>You are training licensed clinicians in clinical practice protocols</span>
                 </li>
                 <li className="flex gap-3">
-                  <span className="text-accent-rust font-bold">✕</span>
+                  <XCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
                   <span>You need to meet accreditation requirements tied to evidence-based clinical interventions</span>
                 </li>
                 <li className="flex gap-3">
-                  <span className="text-accent-rust font-bold">✕</span>
+                  <XCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
                   <span>You are looking for a replacement for therapy, treatment, or psychiatric care</span>
                 </li>
                 <li className="flex gap-3">
-                  <span className="text-accent-rust font-bold">✕</span>
+                  <XCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
                   <span>Your institution requires a randomized controlled trial evidence base</span>
                 </li>
               </ul>
@@ -299,17 +300,17 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-accent-rust text-white">
+      <section className="py-20 px-4 bg-accent text-background border-b border-accent">
         <div className="container max-w-3xl text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to bring this to your program?</h2>
-          <p className="text-lg mb-8 opacity-95">
+          <p className="text-lg mb-8 opacity-90">
             The curriculum is deployable from day one. Complete facilitator scripts. No clinical training required to facilitate. Start with Part I at $1,500.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-white text-accent-rust hover:bg-gray-100">
+            <Button className="bg-background text-accent hover:bg-gray-100">
               Request a Pilot Proposal
             </Button>
-            <Button className="border-2 border-white text-white hover:bg-white/10">
+            <Button className="border-2 border-background text-background hover:bg-background/10">
               View Full Curriculum
             </Button>
           </div>
@@ -317,7 +318,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-card border-t border-border py-12 px-4">
+      <footer className="bg-secondary border-t border-border py-12 px-4">
         <div className="container max-w-5xl">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
@@ -327,22 +328,22 @@ export default function Home() {
             <div>
               <h4 className="font-semibold text-text-primary mb-4 text-sm">Navigation</h4>
               <ul className="space-y-2 text-sm text-text-secondary">
-                <li><a href="#curriculum" className="hover:text-accent-rust transition-colors">Curriculum</a></li>
-                <li><a href="#pricing" className="hover:text-accent-rust transition-colors">Pricing</a></li>
-                <li><a href="#about" className="hover:text-accent-rust transition-colors">About</a></li>
+                <li><a href="#curriculum" className="hover:text-accent transition-colors">Curriculum</a></li>
+                <li><a href="#pricing" className="hover:text-accent transition-colors">Pricing</a></li>
+                <li><a href="#about" className="hover:text-accent transition-colors">About</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold text-text-primary mb-4 text-sm">Resources</h4>
               <ul className="space-y-2 text-sm text-text-secondary">
-                <li><a href="#" className="hover:text-accent-rust transition-colors">Facilitator Guide</a></li>
-                <li><a href="#" className="hover:text-accent-rust transition-colors">Documentation</a></li>
+                <li><a href="#" className="hover:text-accent transition-colors">Facilitator Guide</a></li>
+                <li><a href="#" className="hover:text-accent transition-colors">Documentation</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold text-text-primary mb-4 text-sm">Contact</h4>
               <p className="text-sm text-text-secondary">
-                <a href="mailto:hello@whatreallyhappened.com" className="hover:text-accent-rust transition-colors">
+                <a href="mailto:hello@whatreallyhappened.com" className="hover:text-accent transition-colors">
                   hello@whatreallyhappened.com
                 </a>
               </p>
