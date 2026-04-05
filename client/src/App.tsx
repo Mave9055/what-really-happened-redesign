@@ -18,10 +18,11 @@ function Router() {
   );
 }
 
-// NOTE: About Theme
-// - First choose a default theme according to your design style (dark or light bg), than change color palette in index.css
-//   to keep consistent foreground/background color across components
-// - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
+// NOTE: Design Philosophy - Warm Institutional with Narrative Flow
+// - Light theme with warm cream background (#faf9f7)
+// - Warm rust (#a85a3a) and gold (#d4a574) accents
+// - Serif typography for warmth and readability
+// - Flowing, narrative-driven layout
 
 function App() {
   return (

@@ -3,6 +3,14 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Design Philosophy: Warm Institutional with Narrative Flow
+ * Color Palette: Warm cream backgrounds, sage accents, rust and gold highlights
+ * Typography: Serif fonts for warmth, generous line-height for readability
+ * Layout: Flowing, organic with asymmetric placement and narrative progression
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap');
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -43,74 +51,86 @@
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
+  /* Warm Institutional Color Palette */
+  --bg-primary: #faf9f7;
+  --bg-secondary: #f5f1ed;
+  --bg-tertiary: #e8ebe6;
+  --accent-rust: #a85a3a;
+  --accent-gold: #d4a574;
+  --text-primary: #2c2c2c;
+  --text-secondary: #7a7a7a;
+  --text-tertiary: #a8a8a8;
+  --border-color: #e0dcd8;
+  --border-hover: #d4ccc4;
+  
+  --primary: var(--accent-rust);
+  --primary-foreground: #faf9f7;
+  --sidebar-primary: var(--accent-rust);
+  --sidebar-primary-foreground: #faf9f7;
+  --chart-1: #c9956e;
+  --chart-2: #a85a3a;
+  --chart-3: #8b4513;
+  --chart-4: #6b3410;
+  --chart-5: #4a2308;
+  --radius: 0.5rem;
+  --background: #faf9f7;
+  --foreground: #2c2c2c;
+  --card: #f5f1ed;
+  --card-foreground: #2c2c2c;
+  --popover: #f5f1ed;
+  --popover-foreground: #2c2c2c;
+  --secondary: #e8ebe6;
+  --secondary-foreground: #2c2c2c;
+  --muted: #e0dcd8;
+  --muted-foreground: #7a7a7a;
+  --accent: #a85a3a;
+  --accent-foreground: #faf9f7;
+  --destructive: #c74545;
+  --destructive-foreground: #faf9f7;
+  --border: #e0dcd8;
+  --input: #f5f1ed;
+  --ring: #a85a3a;
+  --sidebar: #f5f1ed;
+  --sidebar-foreground: #2c2c2c;
+  --sidebar-accent: #e8ebe6;
+  --sidebar-accent-foreground: #a85a3a;
+  --sidebar-border: #e0dcd8;
+  --sidebar-ring: #a85a3a;
 }
 
 .dark {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-500);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.85 0.005 65);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.85 0.005 65);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.85 0.005 65);
-  --secondary: oklch(0.24 0.006 286.033);
-  --secondary-foreground: oklch(0.7 0.005 65);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground:  oklch(0.92 0.005 65);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.488 0.243 264.376);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.85 0.005 65);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground:  oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.488 0.243 264.376);
+  --primary: #d4a574;
+  --primary-foreground: #2c2c2c;
+  --sidebar-primary: #d4a574;
+  --sidebar-primary-foreground: #2c2c2c;
+  --background: #2c2c2c;
+  --foreground: #faf9f7;
+  --card: #3a3a38;
+  --card-foreground: #faf9f7;
+  --popover: #3a3a38;
+  --popover-foreground: #faf9f7;
+  --secondary: #4a4a48;
+  --secondary-foreground: #faf9f7;
+  --muted: #5a5a58;
+  --muted-foreground: #c8c4bc;
+  --accent: #d4a574;
+  --accent-foreground: #2c2c2c;
+  --destructive: #e07070;
+  --destructive-foreground: #2c2c2c;
+  --border: #4a4a48;
+  --input: #3a3a38;
+  --ring: #d4a574;
+  --chart-1: #d4a574;
+  --chart-2: #c9956e;
+  --chart-3: #a85a3a;
+  --chart-4: #8b4513;
+  --chart-5: #6b3410;
+  --sidebar: #3a3a38;
+  --sidebar-foreground: #faf9f7;
+  --sidebar-accent: #4a4a48;
+  --sidebar-accent-foreground: #d4a574;
+  --sidebar-border: #4a4a48;
+  --sidebar-ring: #d4a574;
 }
 
 @layer base {
@@ -119,7 +139,47 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.8;
   }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lora', Georgia, serif;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--text-primary);
+  }
+  
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  
+  h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+  }
+  
+  a {
+    color: var(--accent-rust);
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: var(--accent-gold);
+  }
+  
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
   [type="button"]:not(:disabled),
@@ -173,5 +233,79 @@
       padding-right: 2rem;
       max-width: 1280px; /* Standard content width */
     }
+  }
+  
+  /* Warm Institutional Components */
+  .section-label {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 0.875rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent-rust);
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .btn-primary {
+    @apply px-6 py-3 rounded-sm transition-all duration-300;
+    background-color: var(--accent-rust);
+    color: #faf9f7;
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-weight: 600;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--accent-gold);
+    transform: translateY(-2px);
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 rounded-sm border transition-all duration-300;
+    border-color: var(--border-color);
+    color: var(--text-secondary);
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-weight: 600;
+  }
+  
+  .btn-secondary:hover {
+    border-color: var(--accent-rust);
+    color: var(--accent-rust);
+  }
+  
+  .pull-quote {
+    border-left: 4px solid var(--accent-rust);
+    background: var(--bg-secondary);
+    padding: 2rem 2.5rem;
+    margin: 2.5rem 0;
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+  }
+  
+  .pull-quote.large {
+    font-size: 1.8rem;
+    padding: 3rem 3.5rem;
+    text-align: center;
+    border-left: none;
+    border-top: 4px solid var(--accent-rust);
+    border-bottom: 4px solid var(--accent-rust);
+  }
+  
+  .pull-quote-attribution {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    letter-spacing: 0.1em;
+    margin-top: 1rem;
+    font-style: italic;
+  }
+  
+  .divider-organic {
+    height: 60px;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200"><path d="M0,100 Q300,50 600,100 T1200,100 L1200,200 L0,200 Z" fill="%23e8ebe6" opacity="0.5"/></svg>');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 2rem 0;
   }
 }
